@@ -6,5 +6,5 @@ void main() {
   // used +
   String firstName = 'basil';
   String lastName = 'ashraf';
-  print(firstName + ' ' + firstName);
+  print(firstName + ' ' + lastName);
 }

@@ -7,5 +7,5 @@ void main() {
   print(n);
 
   //double is A Data type used for decimal numbers
-  double m = 2.5;
+  // double m = 2.5;
 }
