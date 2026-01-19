@@ -6,7 +6,7 @@ c) Print animals.first, animals.last, and animals.length.
 
 void main() {
   //a
-  List animal = ['dog', 'lion', 'cat'];
+  List<String> animal = ['dog', 'lion', 'cat'];
 
   //b
   animal.add('panda'); //add

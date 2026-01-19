@@ -6,7 +6,11 @@ c) Print all keys, values, and check if 'pages' exists as a key.
 
 void main() {
   //a
-  Map book = {'title': 'Dart Guide', 'pages': 120, 'price': 19.99};
+  Map<String, dynamic> book = {
+    'title': 'Dart Guide',
+    'pages': 120,
+    'price': 19.99,
+  };
 
   //b
   print(book['title']);
