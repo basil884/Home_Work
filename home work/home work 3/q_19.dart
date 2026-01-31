@@ -4,15 +4,26 @@ counts of occurrences. Compare lengths and print a message if a specific name ap
 once.
  */
 void main() {
-  List<String> names = ['basil', 'ashraf', 'basil'];
-  Set<String> uniqueNames = names.toSet();
-  int lengthSet = uniqueNames.length;
-  int lengthList = names.length;
+  List<String> names = ['basil', 'ashraf', 'basil', 'ashraf', 'basil'];
 
-  Map<String, int> Counting = {names[0]: 5, names[1]: 10, names[2]: 15};
-  names.forEach((name) {
-    Counting[name] = (Counting[name]!);
-  });
+  Map<String, int> Counting = {};
+
+  for (var name in names) {
+    if (Counting.containsKey(name)) {
+      Counting[name] = Counting[name]! + 1;
+    } else {
+      Counting[name] = 1;
+    }
+  }
+  print(Counting);
+
+  // Set<String> uniqueNames = names.toSet();
+  // int lengthSet = uniqueNames.length;
+  // int lengthList = names.length;
+
+  // names.forEach((name) {
+  //   Counting[name] = (Counting[name]!);
+  // });
 
   // if (lengthList == lengthSet) {
   //   print('not duplicates items');

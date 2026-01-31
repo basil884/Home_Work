@@ -12,8 +12,10 @@ void main() {
   double? price = products['mouse'];
   print('orginal price: $price');
   print('orginal length:${price.toString().length}');
-  print('With the addition :${price.toString().padLeft(10)}');
   print(
-    'After adding spaces from the left : ${price.toString().padLeft(10).length}',
+    'With the addition :${price.toString().padLeft(price.toString().length + 1, '\$')}',
+  );
+  print(
+    'After adding spaces from the left : ${price.toString().padLeft(price.toString().length).length}',
   );
 }

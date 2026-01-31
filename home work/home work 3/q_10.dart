@@ -16,9 +16,5 @@ void main() {
   //print the total length
   print(countryCodes.length);
 
-  if (!countryCodes.containsKey('JO')) {
-    print('Jordan missing');
-  } else {
-    print(countryCodes['JO']);
-  }
+  countryCodes['JO'] ?? print('Jordan missing');
 }

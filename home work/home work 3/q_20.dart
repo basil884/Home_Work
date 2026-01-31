@@ -11,7 +11,7 @@ void main() {
   ];
   for (int i = 0; i < users.length; i++) {
     // check user age un 18
-    if (users[i]['age'] < 18 || users[i]['have a paren'] == false) {
+    if (users[i]['age'] < 18 || users[i]['have a paren'] == false) { 
       print('${users[i]['name'] + ' '}Entry is not allowed');
     } else if (users[i]['age'] >= 18) {
       print('${users[i]['name'] + ' '}Welcome');

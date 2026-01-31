@@ -6,7 +6,7 @@ safety where needed.
  */
 
 void main() {
-  String path = '/profile';
+  String path = '/products';
   switch (path) {
     case '/':
       Map homePage = {'/products': 'products', '/profile': 'profile'};

@@ -7,40 +7,40 @@ import 'dart:io';
 
 void main() {
   Map<String, double> products = {
-    'mouse': 299.9,
+    'mouse': 100,
     'keyboard': 399.9,
     'headphone': 600.0,
   };
+  // print('is you student (true / false)');
+  // String? userStudent = stdin.readLineSync();
+  // print('Enter the coupon is hav');
+  // String? usercoupon = stdin.readLineSync();
 
-  print('Enter product name ${products}:');
-  String? productName = stdin.readLineSync()!.toLowerCase();
+  String? userStudent = 'true';
+  String? usercoupon = '12345';
+  //ask
+  String coupon = '12345';
 
-  double originalPrice = products[productName]!;
-  double finalPrice = originalPrice;
-  double discount = 0.5;
+  String selctProductName = 'mouse';
 
-  print('Are you a student (yes/no):');
-  String? isStudent = stdin.readLineSync();
+  double originalPrice = products[selctProductName]!;
+  double discount = 0;
 
-  print('Enter coupon code If there is:');
-  String? coupon = stdin.readLineSync();
-
-  if (isStudent == 'yes') {
-    if (coupon == 'couponbasil') {
-      discount = 0.30;
-    } else {
-      discount = 0.20;
-    }
+  double finalPrice = originalPrice * discount; //800
+  discount = 0.40;
+  finalPrice = originalPrice * discount; //800
+  finalPrice.toStringAsFixed(1);
+  if (userStudent == 'true' && usercoupon == coupon && originalPrice > 500) {
+    print(finalPrice.toStringAsFixed(1));
+  } else if (usercoupon == coupon && originalPrice > 500) {
+    discount = 0.60;
+    finalPrice = originalPrice * discount; //800
+    print(finalPrice.toStringAsFixed(1));
+  } else if (originalPrice > 500) {
+    discount = 0.80;
+    finalPrice = originalPrice * discount; //800
+    print(finalPrice.toStringAsFixed(1));
   } else {
-    if (originalPrice > 500) {
-      discount = 0.10;
-    } else {
-      discount = 0;
-    }
+    print(originalPrice);
   }
-
-  finalPrice = originalPrice - (originalPrice * discount);
-
-  print('Original Price: $originalPrice');
-  print('Final Price: $finalPrice');
 }
