@@ -6,9 +6,10 @@
 void main() {
   List celsius = [0, 20, 37, 100];
   for (var i = 0; i < celsius.length; i++) {
-    if (((celsius[i] * 1.8) + 32) > 90) {
+    double fahrenheit = ((celsius[i] * 1.8) + 32);
+    if (fahrenheit > 90) {
       print(
-        'celsius = ${celsius[i]} convert to Fahrenheit = ${(celsius[i] * 1.8) + 32}°F',
+        'celsius = ${celsius[i]} convert to Fahrenheit = ${fahrenheit.toStringAsFixed(2)}°F',
       );
     }
   }

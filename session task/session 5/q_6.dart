@@ -3,11 +3,24 @@
 - Use it to print all prime numbers between 1 and 50.
  */
 void main() {
-  isPrime(5);
+  for (int i = 1; i <= 50; i++) {
+    if (isPrime(i)) {
+      print('$i is Prime');
+    }
+  }
 }
 
-void isPrime(int n) {
-  if (n % n == 0 && n % 1 == n) {
-    print(n);
+bool isPrime(int n) {
+  int count = 0;
+
+  for (int i = 1; i <= n; i++) {
+    if (n % i == 0) {
+      count++;
+    }
+  }
+  if (count == 2) {
+    return true;
+  } else {
+    return false;
   }
 }

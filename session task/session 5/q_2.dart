@@ -15,9 +15,7 @@ void main() {
   grocery['banana'] = 4;
   List shooping = ["apple", "apple", "mango"]; //20
   for (var i = 0; i < shooping.length; i++) {
-    // print(shooping[i]);
-    // print(grocery[shooping[i]]);
-    grocery[shooping[i]] = totalPrice += grocery[shooping[i]]!;
+    totalPrice = totalPrice += grocery[shooping[i]]!; //
   }
   print(totalPrice);
 }
