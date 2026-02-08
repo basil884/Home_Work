@@ -22,7 +22,6 @@ void main() {
   List<int> userNumbers = [numOne, numTwo, numThre, numFour, numFive];
   List<int> missingNumbers = [];
 
-  // print(numbersOfTen);
   //check user input numbers 10
   if (userNumbers.every((num) => num >= 1 && num <= 10)) {
     for (var i = 1; i <= 10; i++) {

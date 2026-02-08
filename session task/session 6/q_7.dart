@@ -6,7 +6,7 @@ import 'dart:io';
 
 void main() {
   print('Please enter a word:');
-  String? text = stdin.readLineSync()!;
+  String? text = 'basil';
   List<String> splitted = text.replaceAll(' ', '').split('');
   print(splitted.length);
 

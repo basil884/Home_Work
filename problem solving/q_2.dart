@@ -9,19 +9,19 @@ and return false if every element is distinct.
 
 void main() {
   Solution solution = Solution();
-  List<int> nums = [1, 2, 3, 1];
+  List<int> nums = [1, 2, 3];
 
   print(solution.containsDuplicate(nums));
 }
 
 class Solution {
-  bool containsDuplicate(List<int> nums) {
-    Set<int> set = {};
-    for (int num in nums) {
-      if (set.contains(num)) {
+  bool containsDuplicate(List<int> numbers) {
+    Set<int> numberUnique = {};
+    for (int number in numbers) {
+      if (numberUnique.contains(number)) {
         return true;
       }
-      set.add(num);
+      numberUnique.add(number);
     }
     return false;
   }

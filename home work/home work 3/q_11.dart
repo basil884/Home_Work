@@ -3,8 +3,6 @@
 // discounts based on whether the user is a student, has a coupon, or if the price is above a threshold.
 // Print the final price.
 //  */
-import 'dart:io';
-
 void main() {
   Map<String, double> products = {
     'mouse': 100,

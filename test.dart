@@ -1,35 +1,48 @@
-import 'dart:io';
-
 void main() {
-  // 1. طلب الجملة من المستخدم
-  print('الرجاء إدخال جملة:');
-  String? sentence = stdin.readLineSync();
+  // List<int> characters = [1, 2, 3, 4, 5];
+  // List<int> characterss = [];
 
-  if (sentence != null && sentence.isNotEmpty) {
-    // 2. تقسيم الجملة إلى كلمات
-    List<String> words = sentence.trim().split(
-      RegExp(r'\s+'),
-    ); // تقسيم ذكي يتجاهل المسافات الزائدة
+  // characters.forEach((element) {
+  //   if (characterss.isEmpty || element > characterss[0]) {
+  //     characterss.clear();
+  //     characterss.add(element);
+  //   }
+  // });
+  // print(characters);
+  // print(characterss);
 
-    print('عدد الكلمات: ${words.length}');
+  // List numbers = [1, 2, 3, 4, 5];
+  // Set numberUnique = {}; //1,2,3,4,5
 
-    // 3. البحث عن أطول وأقصر كلمة
-    String longestWord = words[0];
-    String shortestWord = words[0];
+  // for (var i = 0; i < numbers.length; i++) {
+  //   if (!numberUnique.contains(numbers[i])) {
+  //     numberUnique.add(numbers[i]);
+  //   }
+  // }
+  // if (numberUnique.length == numbers.length) {
+  //   print('false');
+  // } else {
+  //   print('true');
+  // }
 
-    for (String word in words) {
-      // التحقق من الأطول
-      if (word.length > longestWord.length) {
-        longestWord = word;
-      }
-      // التحقق من الأقصر
-      if (word.length < shortestWord.length) {
-        shortestWord = word;
-      }
-    }
+  // List<int> numbers = [1, 2, 3, 4, 5, 1];
+  // Set<int> numberUnique = numbers.toSet(); //1,2,3,4,5
 
-    // 4. طباعة النتائج
-    print('أطول كلمة هي: "$longestWord" (طولها ${longestWord.length})');
-    print('أقصر كلمة هي: "$shortestWord" (طولها ${shortestWord.length})');
+  // if (numbers.length == numberUnique.length) {
+  //   print('false');
+  // } else {
+  //   print('true');
+  // }
+
+  print(containsDuplicate([1, 2, 3, 4, 5]));
+}
+
+bool containsDuplicate(List<int> nums) {
+  Set<int> numberUnique = nums.toSet(); //1,2,3,4,5
+
+  if (nums.length == numberUnique.length) {
+    return false;
+  } else {
+    return true;
   }
 }
