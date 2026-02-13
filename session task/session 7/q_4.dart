@@ -15,9 +15,9 @@ void main() {
 
 class Book {
   String? title;
-  int? pages;
+  int pages = 0;
   int add({int addPages = 0}) {
-    pages = pages! + addPages;
-    return pages!;
+    pages = pages + addPages;
+    return pages;
   }
 }

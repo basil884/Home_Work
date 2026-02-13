@@ -24,12 +24,12 @@ Explanation: In this case, no transactions are done and the max profit = 0.
 void main() {
   Solution solution = Solution();
   // solution.maxProfit(prices: [7, 1, 5, 3, 6, 4]);
-  print(solution.maxProfit(prices: [7, 6, 4, 3, 1]));
+  print(solution.maxProfit([7, 6, 4, 3, 1, 8]));
 }
 
 class Solution {
-  int maxProfit({required List<int> prices}) {
-    int minPrice = prices[0];
+  int maxProfit(List<int> prices) {
+    int minPrice = prices[0]; //7 => 6 => 4 => 3 => 1
     int maxProfit = 0;
     for (var i = 0; i < prices.length; i++) {
       if (prices[i] < minPrice) {
@@ -38,6 +38,6 @@ class Solution {
         maxProfit = prices[i] - minPrice;
       }
     }
-    return maxProfit;
+    return minPrice;
   }
 }

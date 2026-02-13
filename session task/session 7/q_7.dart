@@ -7,7 +7,7 @@
 void main() {
   Account myAccount = Account(owner: 'basil');
 
-  // myAccount.deposit(500); //100 + 500 = 600
+  myAccount.deposit(500); //100 + 500 = 600
   myAccount.withdraw(200); //600 - 200 = 400
 
   print('Final balance for ${myAccount.owner} is: \$${myAccount.balance}');
@@ -16,7 +16,6 @@ void main() {
 class Account {
   String owner;
   double balance;
-
   Account({required this.owner, this.balance = 0});
 
   void deposit(double amount) {

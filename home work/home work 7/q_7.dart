@@ -9,7 +9,9 @@ import 'dart:io';
 
 void main() {
   print('Enter a number:');
-  String number = '101180'; // int.parse(stdin.readLineSync()!);
+  String number = '9929'; // int.parse(stdin.readLineSync()!);
+
+  print(number);
   int sum = 0;
   for (var i = 0; i < number.length; i++) {
     sum += int.parse(number[i]);
