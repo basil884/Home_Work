@@ -5,8 +5,16 @@ Ask the user to input a list of integers.
 - Print all numbers that are above the average.
 - Finally, print how many numbers are even and how many are odd in the list. */
 
+import 'dart:io';
+
 void main() {
-  List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  print('Enter a list of integers separated by spaces:');
+  String input = stdin.readLineSync()!;
+  List<String> numbersString = input.split(' ');
+  List<int> numbers = [];
+  for (var element in numbersString) {
+    numbers.add(int.parse(element));
+  }
   int largest = numbers[0];
   int smallest = numbers[0];
   double sum = 0;
