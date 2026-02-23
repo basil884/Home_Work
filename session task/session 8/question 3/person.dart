@@ -8,7 +8,7 @@ class Person {
     } else {
       _firstName = firstName;
     }
-  }
+                   }
 
   set lastName(String lastName) {
     if (lastName.isEmpty) {

@@ -14,22 +14,7 @@ Examples:
 - '{[]}' → Valid */
 
 void main() {
-  // print(isValid('()')); // true
-  // print(isValid('()[]{}')); // true
-  // print(isValid('(]')); // false
-  // print(isValid('([)]')); // false
-  // print(isValid('{[]}')); // true
-
-  bool isValid(String s) {
-    List<String> stack = s.split('');
-
-    if (stack.first != stack.last) {
-      return false;
-    } else {
-      return true;
-    }
-  }
-
-  isValid('()[]{}');
-  // print(isValid());
+  List<String> s = ['('];
+  Map<String, String> brackets = {'(': ')', '{': '}', '[': ']'};
+  print(brackets[s.first]);
 }

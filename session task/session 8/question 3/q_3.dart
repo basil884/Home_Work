@@ -11,8 +11,8 @@ import 'person.dart';
 
 void main() {
   Person person = Person();
-  person.firstName = "Ahmed";
-  person.lastName = "Ali";
+  person.firstName = "basil";
+  person.lastName = "ashraf";
   print('Full Name: ${person.fullName}');
 
   // invalid names
