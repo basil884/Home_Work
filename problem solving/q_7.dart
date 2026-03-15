@@ -22,3 +22,16 @@ class ListNode {
   ListNode? next;
   ListNode([this.val = 0, this.next]);
 }
+
+class MyLinkedList {
+  ListNode? head;
+
+  void append(int number) {
+    ListNode newNode = ListNode(number);
+    if (head == null) {
+      head = newNode;
+      return;
+    } 
+    ListNode current = head!;
+  }
+}

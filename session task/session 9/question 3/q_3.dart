@@ -1,6 +1,6 @@
 /**
- * Given an array of integers nums sorted in ascending order, and an integer target, write a function to
-search target in nums.
+ * Given an array of integers nums sorted in ascending order, and an integer target, 
+ * write a function to search target in nums.
 - If target exists, return its index. Otherwise, return -1.
 - The algorithm must run in O(log n) time complexity.
 Examples:
@@ -11,26 +11,17 @@ Explanation: 2 does not exist in nums, so return -1.
  */
 
 void main() {
-  List<int> nums = [-1, 0, 3, 5, 9, 12];
-  int target = 9;
-  // print(right);
-  // for (int i = 0; i < nums.length; i++) {
-  //   if (nums[i] == target) {
-  //     print(i);
-  //     return;
-  //   }
-  // }
-
-  // print(-1);
-
-  print(search([1, 2, 3, 4, 5], 2));
+  int target = 5;
+  List<int> nums = [-1, 0, 3, 5, 9, 10, 12];
+  int x = search(nums, target);
+  print('$target index is $x');
 }
 
 int search(List<int> nums, int target) {
   int lift = 0;
   int right = nums.length - 1;
   while (lift <= right) {
-    int mid = lift + (right - lift) ~/ 2;
+    int mid = (right + lift) ~/ 2;
     if (nums[mid] == target) {
       return mid;
     } else if (nums[mid] < target) {
